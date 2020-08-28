@@ -7,6 +7,7 @@ class Book {
 }
 
 class UI {
+  // Add book
   addBookToList(book) {
     const list = document.getElementById("book-list");
     // Create tr element
@@ -22,6 +23,7 @@ class UI {
     list.appendChild(row);
   }
 
+  // Alert
   showAlert(message, className) {
     // Create div
     const div = document.createElement("div");
@@ -42,12 +44,14 @@ class UI {
     }, 3000);
   }
 
+  // Delete
   deleteBook(target) {
     if (target.className === "delete") {
       target.parentElement.parentElement.remove();
     }
   }
 
+  // Clear fields in form
   clearFields() {
     document.getElementById("title").value = "";
     document.getElementById("author").value = "";
